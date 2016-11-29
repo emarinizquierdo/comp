@@ -1,0 +1,107 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="bbva-typography.html">
+
+<dom-module id="bbva-fonts">
+    <template>
+        <style is="custom-style">
+
+            :root {
+                --bbva-texto-n1-font-size-big: 36pt;
+                --bbva-texto-n1-font-size-small: 18pt;
+                --bbva-texto-n2-font-size-big: 24pt;
+                --bbva-texto-n2-font-size-small: 16pt;
+                --bbva-texto-destacado-font-size-big: 36pt;
+                --bbva-texto-destacado-font-size-small: 18pt;
+                --bbva-texto-n1: {
+                    font-family: bbvaLightFont;
+                    color: var(--bbva-primary-azul-bbva-color);
+                }
+                --bbva-texto-n2: {
+                    font-family: bbvaLightFont;
+                    color: var(--bbva-primary-azul-oscuro-color);
+                }
+                --bbva-texto-n3: {
+                    font-size: 13pt;
+                    font-family: bbvaDefaultFont;
+                    text-transform: uppercase;
+                    color: var(--bbva-primary-azul-luminoso-color);
+                }
+                --bbva-texto-n4: {
+                    font-size: 13pt;
+                    font-family: bbvaDefaultFont;
+                    text-transform: uppercase;
+                    color: var(--bbva-primary-azul-oscuro-color);
+                }
+                --bbva-texto-destacado: {
+                    font-family: bbvaLightFont;
+                    color: var(--bbva-primary-azul-luminoso-color);
+                }
+                --bbva-texto-parrafo: {
+                    font-family: bbvaDefaultFont;
+                    font-size: 15pt;
+                    color: var(--bbva-primary-gris-roca-color);
+                }
+                --bbva-texto-botones: {
+                    font-size: 13pt;
+                    font-family: bbvaDefaultFont;
+                    text-transform: uppercase;
+                    color: var(--bbva-secondary-blanco-color);
+                }
+            }
+
+            @media all and (max-width: 639px) {
+                .bbva-texto-n1 {
+                    @apply(--bbva-texto-n1);
+                    font-size: var(--bbva-texto-n1-font-size-small);
+                }
+                .bbva-texto-n2 {
+                    @apply(--bbva-texto-n2);
+                    font-size: var(--bbva-texto-n1-font-size-small);
+                }
+                .bbva-texto-n3 {
+                    @apply(--bbva-texto-n3);
+                }
+                .bbva-texto-n4 {
+                    @apply(--bbva-texto-n4);
+                }
+                .bbva-texto-destacado {
+                    @apply(--bbva-texto-destacado);
+                    font-size: var(--bbva-texto-destacado-font-size-small);
+                }
+                p {
+                    @apply(--bbva-texto-parrafo);
+                }
+                .bbva-texto-botones {
+                    @apply(--bbva-texto-botones);
+                }
+            }
+
+            @media all and (min-width: 640px) {
+                .bbva-texto-n1 {
+                    @apply(--bbva-texto-n1);
+                    font-size: var(--bbva-texto-n1-font-size-big);
+                }
+                .bbva-texto-n2 {
+                    @apply(--bbva-texto-n2);
+                    font-size: var(--bbva-texto-n2-font-size-big);
+                }
+                .bbva-texto-n3 {
+                    @apply(--bbva-texto-n3);
+                }
+                .bbva-texto-n4 {
+                    @apply(--bbva-texto-n4);
+                }
+                .bbva-texto-destacado {
+                    @apply(--bbva-texto-destacado);
+                    font-size: var(--bbva-texto-destacado-font-size-big);
+                }
+                p {
+                    @apply(--bbva-texto-parrafo);
+                }
+                .bbva-texto-botones {
+                    @apply(--bbva-texto-botones);
+                }
+            }
+        </style>
+    </template>
+</dom-module>

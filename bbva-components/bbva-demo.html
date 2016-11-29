@@ -1,0 +1,161 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="bbva-styles.html">
+<link rel="import" href="bbva-button.html">
+<link rel="import" href="bbva-switch.html">
+
+<dom-module id="bbva-demo">
+
+    <template>
+        <style is="custom-style" include="bbva-styles">
+            :host {
+                font-size: 16px;
+            }
+
+            .box {
+                width: 50px;
+                height: 25px;
+                display: inline-block;
+            }
+
+            .box-primary-azul-oscuro {
+                background-color: var(--bbva-primary-azul-oscuro-color);
+            }
+
+            .box-primary-azul-bbva {
+                background-color: var(--bbva-primary-azul-bbva-color);
+            }
+
+            .box-primary-azul-trafico {
+                background-color: var(--bbva-primary-azul-trafico-color);
+            }
+
+            .box-primary-azul-luminoso {
+                background-color: var(--bbva-primary-azul-luminoso-color);
+            }
+
+            .box-primary-azul-tenue {
+                background-color: var(--bbva-primary-azul-tenue-color);
+            }
+
+            .box-primary-gris-roca {
+                background-color: var(--bbva-primary-gris-roca-color);
+            }
+
+            .box-primary-gris-claro {
+                background-color: var(--bbva-primary-gris-claro-color);
+            }
+
+            .box-secondary-gris-pc {
+                background-color: var(--bbva-secondary-gris-pc-color);
+            }
+
+            .box-secondary-gris-galaxy {
+                background-color: var(--bbva-secondary-gris-galaxy-color);
+            }
+
+            .box-secondary-gris-perla {
+                background-color: var(--bbva-secondary-gris-perla-color);
+            }
+
+            .box-secondary-blanco {
+                background-color: var(--bbva-secondary-blanco-color);
+            }
+
+            .box-another-amarillo {
+                background-color: var(--bbva-another-amarillo-color);
+            }
+
+            .box-another-naranja {
+                background-color: var(--bbva-another-naranja-color);
+            }
+
+            .box-another-raspberry {
+                background-color: var(--bbva-another-raspberry-color);
+            }
+
+            .box-another-verde {
+                background-color: var(--bbva-another-verde-color);
+            }
+
+            .box-another-turquesa {
+                background-color: var(--bbva-another-turquesa-color);
+            }
+
+            .default-font {
+                font-family: bbvaDefaultFont;
+            }
+
+            .light-font {
+                font-family: bbvaLightFont;
+            }
+
+
+        </style>
+
+        <h1>Primary Colors</h1>
+        <div class="box-primary-azul-oscuro box"></div>
+        <div class="box-primary-azul-bbva box"></div>
+        <div class="box-primary-azul-trafico box"></div>
+        <div class="box-primary-azul-luminoso box"></div>
+        <div class="box-primary-azul-tenue box"></div>
+        <div class="box-primary-gris-roca box"></div>
+        <div class="box-primary-gris-claro box"></div>
+        <h1>Secondary Colors</h1>
+        <div class="box-secondary-gris-pc box"></div>
+        <div class="box-secondary-gris-galaxy box"></div>
+        <div class="box-secondary-gris-perla box"></div>
+        <div class="box-secondary-blanco box"></div>
+        <h1>Another Colors</h1>
+        <div class="box-another-amarillo box"></div>
+        <div class="box-another-naranja box"></div>
+        <div class="box-another-raspberry box"></div>
+        <div class="box-another-verde box"></div>
+        <div class="box-another-turquesa box"></div>
+
+        <h1>Fonts</h1>
+        <h3>bbvaDefaultFont</h3>
+        <p class="default-font">El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.</p>
+        <p class="default-font"><strong>El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.</strong></p>
+        <h3>bbvaLightFont</h3>
+        <p class="light-font">El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.</p>
+        <p class="light-font"><strong>El veloz murciélago hindú comía feliz cardillo y kiwi. La cigüeña tocaba el saxofón detrás del palenque de paja.</strong></p>
+
+        <h1>Typography</h1>
+        <p class="bbva-texto-n1">Texto nivel 1</p>
+        <p class="bbva-texto-n2">Texto nivel 2</p>
+        <p class="bbva-texto-n3">Texto nivel 3</p>
+        <p class="bbva-texto-n4">Texto nivel 4</p>
+
+        <h1>Typography</h1>
+        <p class="bbva-texto-destacado">Título destacado</p>
+        <p>Párrafo</p>
+        <p class="bbva-texto-botones">Texto botones</p>
+
+        <h1>Buttons</h1>
+        <h2>bbva-button big</h2>
+        <bbva-button big>Primario</bbva-button>
+        <bbva-button big secondary >Secundario</bbva-button>
+        <bbva-button big disabled>Inactivo</bbva-button>
+
+        <h2>bbva-button</h2>
+        <bbva-button>Primario</bbva-button>
+        <bbva-button secondary >Secundario</bbva-button>
+        <bbva-button disabled>Inactivo</bbva-button>
+
+        <h2>bbva-button with icons</h2>
+        <bbva-button icon="delete" title="delete">Borrar</bbva-button>
+        <bbva-button src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="octocat" title="octocat">Source</bbva-button>
+        <bbva-button disabled icon="reply" title="reply">Alternative</bbva-button>
+
+        <h2>bbva-switch</h2>
+        <bbva-switch checked></bbva-switch>
+        <bbva-switch disabled></bbva-switch>
+    </template>
+    <script>
+        // element registration
+        Polymer({
+            is: "bbva-demo"
+        });
+    </script>
+</dom-module>

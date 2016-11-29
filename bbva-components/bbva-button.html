@@ -1,0 +1,112 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="bbva-styles.html">
+
+<dom-module id="bbva-button">
+    <template>
+        <style is="custom-style" include="bbva-styles">
+            :host {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                min-height: 38px;
+                min-width: 88px;
+                line-height: 38px;
+                vertical-align: middle;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-grid-row-align: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 2px;
+                box-sizing: border-box;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                border: 0;
+                padding: 0 35px;
+                margin: 6px 8px;
+                color: var(--bbva-texto-botones);
+                background-color: var(--bbva-primary-azul-bbva-color);
+                white-space: nowrap;
+                text-transform: uppercase;
+                font-style: inherit;
+                font-variant: inherit;
+                font-family: inherit;
+                text-decoration: none;
+                overflow: hidden;
+            }
+
+            :host([secondary]) {
+                background-color: var(--bbva-secondary-gris-perla-color);
+                border: 1px solid;
+                border-color: var(--bbva-secondary-gris-pc-color);
+                color: var(--bbva-primary-azul-bbva-color);
+            }
+
+            :host([disabled]) {
+                background-color: var(--bbva-primary-azul-tenue-color);
+                border: 1px solid;
+                border-color: var(--bbva-primary-azul-tenue-color);
+                cursor: auto;
+            }
+
+            :host([big]) {
+                min-height: 48px;
+                line-height: 48px;
+                padding: 0 40px;
+            }
+
+            :host(:not([icon]):not([src])) iron-icon {
+               display: none;
+            }
+            iron-icon{
+               margin-top: -2px;
+            }
+        </style>
+        <iron-icon id="icon" src="[[src]]" icon="[[icon]]" alt$="[[alt]]"></iron-icon>
+        <content></content>
+    </template>
+
+    <script>
+        // element registration
+        Polymer({
+            is: "bbva-button",
+            properties: {
+                /**
+                 * The URL of an image for the icon. If the src property is specified,
+                 * the icon property should not be.
+                 */
+                src: {
+                    type: String
+                },
+
+                /**
+                 * Specifies the icon name or index in the set of icons available in
+                 * the icon's icon set. If the icon property is specified,
+                 * the src property should not be.
+                 */
+                icon: {
+                    type: String
+                },
+
+                /**
+                 * Specifies the alternate text for the button, for accessibility.
+                 */
+                alt: {
+                    type: String
+                }
+            },
+            _altChanged: function(newValue, oldValue) {
+                var label = this.getAttribute('aria-label');
+
+                // Don't stomp over a user-set aria-label.
+                if (!label || oldValue == label) {
+                    this.setAttribute('aria-label', newValue);
+                }
+            }
+        });
+    </script>
+
+</dom-module>
